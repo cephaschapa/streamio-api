@@ -50,7 +50,7 @@ app.post('/create-meeting', async(req, res)=> {
                 success: true,
                 data: data
             })
-            console.log(data)
+            console.log(data, data)
             
     } catch (error) {
         console.log(error)
