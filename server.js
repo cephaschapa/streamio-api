@@ -6,7 +6,7 @@ const { default: axios } = require("axios");
 require('dotenv').config();
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -56,6 +56,7 @@ app.post('/create-meeting', async(req, res)=> {
         console.log(error)
     }
 })
+
 
 
 app.listen(port, () => {
